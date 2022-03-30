@@ -1,0 +1,189 @@
+:root{
+    --nav-bar-height: 5em;
+  }
+  
+  
+  * {
+    margin: 0;
+    padding: 0;
+    font-family: Roboto, arial, sans-serif;
+  }
+  ul, ol{
+    list-style: none;
+  }
+  
+  a{
+    text-decoration:none;  
+  }
+  
+  #navbar{
+    position: fixed;
+    top:0;
+    width:100%;
+    background-color: #1A237E;
+    height: var(--nav-bar-height);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+  }
+  
+  .nav-li{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+  }
+  
+  .nav-link{
+    display:block;
+    flex-direction: row;
+    padding:0.5em;
+    text-decoration: none;
+    color: white;
+    font-size: 2.2em;
+    
+  }
+  
+  .nav-link:hover{
+    background-color:#E3F2FD;
+    color:#1A237E;
+  }
+  
+  #welcome-section{
+   /* margin-top: var(--nav-bar-height);*/
+    width:100%;
+    height:100vh;
+    background-color: #B0BEC5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction:column;
+    background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="36" height="72" viewBox="0 0 36 72"%3E%3Cg fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.4"%3E%3Cpath d="M2 6h12L8 18 2 6zm18 36h12l-6 12-6-12z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');
+    color:#FBF9F9;
+  /*  font-family: Avenir;*/
+  }
+  h1{
+    font-size: 4em;
+  }
+  
+  .welcome-section h1, 
+  .welcome-section a{
+    background-color: #B0BEC5;
+      margin:0px;
+    padding:10px;  
+  }
+  
+  #projects{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    width:100%;
+    height:50vh;
+  }
+  
+  #contacts{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    width:100%;
+    height:40vh;
+    color: #1A237E;
+    font-size:2em;
+  }
+  
+  @media(max-width: 425px){
+    .nav-link{
+    padding:0.5em;
+    text-decoration: none;
+    color: white;
+    font-size: 1.5em;
+  }
+  }
+  
+  #spinner-wrapper {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+  }
+  #loader {
+      display: block;
+      position: relative;
+      left: 50%;
+      top: 50%;
+      width: 150px;
+      height: 150px;
+      margin: -75px 0 0 -75px;
+      border-radius: 50%;
+      border: 3px solid transparent;
+      border-top-color: #9370DB;
+      border-top-color: #fff;
+      -webkit-animation: spin 2s linear infinite;
+      animation: spin 2s linear infinite;
+  }
+  #loader:before {
+      content: "";
+      position: absolute;
+      top: 5px;
+      left: 5px;
+      right: 5px;
+      bottom: 5px;
+      border-radius: 50%;
+      border: 3px solid transparent;
+      border-top-color: #BA55D3;
+      -webkit-animation: spin 3s linear infinite;
+      animation: spin 3s linear infinite;
+    
+  }
+  #loader:after {
+      content: "";
+      position: absolute;
+      top: 15px;
+      left: 15px;
+      right: 15px;
+      bottom: 15px;
+      border-radius: 50%;
+      border: 3px solid transparent;
+      border-top-color: #FF00FF;
+      -webkit-animation: spin 1.5s linear infinite;
+      animation: spin 1.5s linear infinite;
+    
+  }
+  @-webkit-keyframes spin {
+      0%   {
+          -webkit-transform: rotate(0deg);
+          -ms-transform: rotate(0deg);
+          transform: rotate(0deg);
+      }
+      100% {
+          -webkit-transform: rotate(360deg);
+          -ms-transform: rotate(360deg);
+          transform: rotate(360deg);
+      }
+  }
+  @keyframes spin {
+      0%   {
+          -webkit-transform: rotate(0deg);
+          -ms-transform: rotate(0deg);
+          transform: rotate(0deg);
+      }
+      100% {
+          -webkit-transform: rotate(360deg);
+          -ms-transform: rotate(360deg);
+          transform: rotate(360deg);
+      }
+  }
+  
+  .spinner-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ff6347;
+  z-index: 999999;
+  }
