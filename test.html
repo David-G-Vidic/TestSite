@@ -1,0 +1,56 @@
+v<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="tests.css">
+</head>
+
+<main>
+    <script>
+    $(document).ready(function() {
+    //Preloader
+    preloaderFadeOutTime = 500;
+    function hidePreloader() {
+    var preloader = $('.spinner-wrapper');
+    preloader.fadeOut(preloaderFadeOutTime);
+    }
+    hidePreloader();
+    });
+    </script>
+    <nav id="navbar">
+       <ul class='nav-li'>
+        <li><a class="nav-link" href="#welcome-section">About</a></li>
+        <li><a class="nav-link" href="#projects">Projects</a></li>
+        <li><a class="nav-link" href="#contacts">Contact</a></li>
+      </ul> 
+    </nav>
+    
+      
+    <section id="welcome-section" class="welcome-section">
+      <H1>David Vidic</h1>
+      <a>web dev</a>
+    </section>
+    
+    <section id="projects" class="projects">
+      <H2 id="project-title">Projects</h2>
+      <div id="tile1" class="project-tile">
+        <a href="https://codepen.io/Da-Vidic/full/yLoGero"  target="_blank"> Link to project</a>
+      </div>
+    </section>
+    
+    <section id="contacts">
+      <a id="profile-link" href="#github.com"
+         target="_blank">my gitHub <img src="https://pngimg.com/uploads/github/github_PNG40.png" width="30px";></img></a>
+    </section>
+    
+    
+    <!--CSS Spinner-->
+    <div class="spinner-wrapper">
+      <div id="loader"></div>
+    </div>
+    
+    </main>
+
+</html>
