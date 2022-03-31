@@ -3,10 +3,27 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>David'sPage</title>
+    <title>David's Page</title>
+    <link rel="shortcut icon" type="image/png" href="/favicon.png">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="styles.css">
-    <script src="/preloader.js"></script>
+    <script src="/preloader.js">
+      let elem = document.body;
+      let elemText = elem.querySelector(".body");
+      let preloader = elem.querySelector(".banter-loader");
+
+      let timerId = setTimeout(() => {
+        elem.style.background = "#fff";
+        elemText.style.display = "block";
+        preloader.style.display = "none";
+      }, 1000);
+
+      setTimeout(() => {
+        clearTimeout(timerId);
+        console.log("preloader off");
+      },5000);
+
+    </script>
 </head>
 
 <div id="preloader"  class="banter-loader">
